@@ -35,7 +35,7 @@ public_users.get('/', async function (req, res) {
     const response = await axios.get(`${BASE_URL}/books`);
     return res.status(200).json(response.data);
   } catch (error) {
-    // Fallback to in-memory data if the internal endpoint is unreachable
+   
     return res.status(200).json(books);
   }
 });
